@@ -3,5 +3,49 @@
 @import './scss/reset';
 
 body {
-    
+    .wrapper {
+        .header {
+            @include flex(row, space-between, center, 0px);
+            padding: 43px 10px;
+            background-color: $BgColor;
+            .nav {
+                &__list {
+                    @include flex(row, space-between, center, 19px);
+                }
+                &__item {
+                    @include flex(row, center, center, 7px);
+                    @include Oswald (14px, 600, 0px);
+                    text-transform: uppercase;
+                }
+                &__link {
+                    color: $mainColor;
+                }
+                &__link:hover {
+                    text-decoration: solid underline $hoverColor 2px;
+                }
+            }
+            .reges {
+                @include flex(row, center, center, 15px);
+                &__login {
+                    @include Oswald (14px, 600, 0px);
+                    color: $mainColor;
+                }
+                &__create {
+                    @include Oswald (14px, 600, 0px);
+                    color: $mainColor;
+                }
+                &__price {
+                    @include flex(column, center, center, 0px);
+                    &-title {
+                        @include Roboto (12px, 400, 15px);
+                        color: $mainColor;
+                    }
+                    &-text {
+                        @include Roboto (14px, 700, 15px);
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+    }
 }

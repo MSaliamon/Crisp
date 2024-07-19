@@ -1,0 +1,21 @@
+@mixin flex($fd, $jc, $ai, $gp) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $gp;
+}
+
+@mixin Oswald($fs, $fw, $lh)  {
+    font-family: 'Oswald', sans-serif;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
+
+@mixin Roboto($fs, $fw, $lh)  {
+    font-family: 'Roboto', sans-serif;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
