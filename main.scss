@@ -3,11 +3,12 @@
 @import './scss/reset';
 
 body {
+    color: $mainColor;
     .wrapper {
         .header {
             @include flex(row, space-between, center, 0px);
             padding: 43px 10px;
-            background-color: $BgColor;
+            background-color: $mainColor;
             .nav {
                 &__list {
                     @include flex(row, space-between, center, 19px);
@@ -18,7 +19,7 @@ body {
                     text-transform: uppercase;
                 }
                 &__link {
-                    color: $mainColor;
+                    color: $bgColor;
                 }
                 &__link:hover {
                     text-decoration: solid underline $hoverColor 2px;
@@ -28,22 +29,93 @@ body {
                 @include flex(row, center, center, 15px);
                 &__login {
                     @include Oswald (14px, 600, 0px);
-                    color: $mainColor;
+                    color: $bgColor;
                 }
                 &__create {
                     @include Oswald (14px, 600, 0px);
-                    color: $mainColor;
+                    color: $bgColor;
                 }
                 &__price {
                     @include flex(column, center, center, 0px);
                     &-title {
                         @include Roboto (12px, 400, 15px);
-                        color: $mainColor;
+                        color: $bgColor;
                     }
                     &-text {
                         @include Roboto (14px, 700, 15px);
-                        color: $mainColor;
+                        color: $bgColor;
                     }
+                }
+            }
+        }
+        .main {
+            margin: 21px;
+            .section1 {
+                @include flex(column, center, flex-start, 0px);
+                background-image: url(./img/page1/png/sky.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                padding: 47px 0px 0 186px;
+                &-container {
+                    @include flex(row, flex-start, center, 14px);
+                    .section1-box {
+                        @include flex(column, flex-start, flex-start, 48px);
+                        width: 40%;
+                        &__img {
+                            position: absolute;
+                            top: 300px;
+                            left: 200px;
+                            z-index: 1;
+                            width: 23%;
+                        }
+                        &__title {
+                            @include Oswald (86px, 600, 96px);
+                            text-align: left;
+                            text-transform: uppercase;
+                            width: 85%;
+                            &--span {
+                                text-shadow: none;
+                                color: transparent;
+                                -webkit-text-stroke: 1px $mainColor;
+                            }
+                        }
+                        &__btn {
+                            @include Oswald (18px, 500, 0px);
+                            padding: 26px 30px 26px 35px;
+                            box-sizing: border-box;
+                            border: 2px solid $mainColor;
+                            text-align: center;
+                            text-transform: uppercase;
+                        }
+                    }
+                    .section1-box2 {
+                        @include flex(row, flex-start, flex-start, 0px);
+                        &__img2 {
+                            position: absolute;
+                            top: 160px;
+                            left: 1200px;
+                            z-index: 1;
+                        }
+                    }
+                }
+                &-container2 {
+                    @include flex(row, flex-start, center, 1500px);
+                }
+            }
+            .section2 {
+                @include flex(column, center, center, 6px);
+                margin-top: 30px;
+                border: 2px solid rgb(196, 196, 196);
+                &__text {
+                    @include Oswald (28px, 400, 68px);
+                    position: absolute;
+                    top: 970px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    background-color: $bgColor;
+                }
+                &-container {
+                    padding: 28px 11px;
                 }
             }
         }
