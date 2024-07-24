@@ -55,7 +55,7 @@ body {
                 background-image: url(./img/page1/png/sky.png);
                 background-size: cover;
                 background-repeat: no-repeat;
-                padding: 47px 0px 0 186px;
+                padding: 47px 0px 0 157px;
                 &-container {
                     @include flex(row, flex-start, center, 14px);
                     .section1-box {
@@ -109,13 +109,20 @@ body {
                 &__text {
                     @include Oswald (28px, 400, 68px);
                     position: absolute;
-                    top: 970px;
+                    top: 920px;
                     text-align: center;
                     text-transform: uppercase;
                     background-color: $bgColor;
                 }
                 &-container {
+                    @include flex(row, center, center, 35px);
                     padding: 28px 11px;
+                }
+                &-box {
+                    padding: 58px;
+                }
+                &-box:hover {
+                    background-color: $bgClose;
                 }
             }
         }
